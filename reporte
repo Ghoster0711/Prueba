@@ -1,0 +1,35 @@
+192.168.0.1 (Gatewaay)
+OS: Linux
+PORT     STATE SERVICE		  VERSION
+22/tcp   open  ssh		      Dropbear sshd 2012.55 (protocol 2.0)
+53/tcp   open  domain	(tcpwrapped)	
+80/tcp   open  http
+1900/tcp open  upnp         Portable SDK for UPnP devices 1.6.19 (Linux 2.6.36; UPnP 1.0)
+
+-------------------------------------------------------------------
+192.168.0.101
+OS: Apple macOS
+PORT      STATE SERVICE		VERSION
+49152/tcp open  unknown
+62078/tcp open  iphone-sync (tcpwrapped)
+
+-------------------------------------------------------------------
+192.168.0.109 (joshua)		
+OS: Linux
+PORT   STATE SERVICE      VERSION
+22/tcp open  ssh          OpenSSH 9.1 (protocol 2.0)
+
+-------------------------------------------------------------------
+192.168.0.110
+PORT      STATE SERVICE		VERSION
+62078/tcp open  iphone-sync (tcpwrapped)
+
+-------------------------------------------------------------------
+
+
+Comando utilizados
+nmap 192.168.0.1/24 --open        (Identificatar los dispositivos conectados por tcp)
+nmap 192.168.0.1/24 -sCV --open   (Identificar la version de los servicios)
+sudo nmap 192.168.0.1/24 -O       (Identificar el sistema operativo) 
+nmap 192.168.0.1/24 -sU      (Identidicar los dispositivos conectados por udp)
+
